@@ -84,10 +84,10 @@ responsive while the GPU is fully committed to diffusion.
 | **A\|B preview — staged 3D vs. finished AI render** | **Product Shot — Eames lounge, studio finish** |
 | ![Any AI Tool](docs/screenshots/03-any-ai-tool.jpg) | ![Game Designer](docs/screenshots/04-game-designer.jpg) |
 | **ControlNet Canny — structure-locked render** | **Concept art — fantasy bottle set** |
-| ![Image to 3D](docs/screenshots/05-image-to-3d.jpg) | ![Remove Background](docs/screenshots/06-remove-background.jpg) |
-| **Image → 3D — single image to GLB mesh** | **Image → 3D — background removal step** |
-| ![Local AI Render](docs/screenshots/07-local-ai-render.jpg) | |
-| **Local AI render — fully on-device, zero cloud** | |
+
+![Local AI Render](docs/screenshots/07-local-ai-render.jpg)
+
+**Local AI render — fully on-device, zero cloud**
 
 ---
 
@@ -117,9 +117,20 @@ python server.py
 
 Open **http://127.0.0.1:5000** in your browser.
 
-### ComfyUI location
+### On the ComfyUI side
 
-The server auto-launches ComfyUI. Point it at your install:
+Design Canvas does **not** ship a model — it only drives a ComfyUI instance.
+Before running the server, make sure ComfyUI is set up:
+
+1. **Install ComfyUI** — see the [official guide](https://github.com/comfyanonymous/ComfyUI#installing).
+2. **Add an SDXL checkpoint** — drop a `.safetensors` file into
+   `ComfyUI/models/checkpoints/`. RealVisXL, Juggernaut XL or DreamShaper XL
+   give the best product-render results. The server auto-detects it.
+3. **(Optional) ControlNet** — for the structure-locked Canny mode, install an
+   SDXL ControlNet model into `ComfyUI/models/controlnet/`.
+4. **Port** — ComfyUI must be reachable on `127.0.0.1:8188` (its default).
+
+The server **auto-launches** ComfyUI for you. Point it at your install:
 
 ```bash
 # Windows
@@ -128,6 +139,9 @@ set COMFYUI_DIR=C:\path\to\ComfyUI
 # Linux / macOS
 export COMFYUI_DIR=/path/to/ComfyUI
 ```
+
+> Prefer to manage it yourself? Just start ComfyUI manually on port `8188`
+> before launching `server.py` — the server will detect and reuse it.
 
 Or start ComfyUI manually on port `8188` before launching the server.
 
