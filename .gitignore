@@ -1,0 +1,30 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# ── Virtual environments ──
+.venv/
+venv/
+env/
+
+# ── Uploaded / generated assets ──
+uploads/*
+!uploads/.gitkeep
+
+# ── User-uploaded custom workflows (keep curated ones tracked manually) ──
+workflows/*
+!workflows/.gitkeep
+!workflows/sd15_depth.json
+
+# ── OS / editor cruft ──
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ── Logs ──
+*.log

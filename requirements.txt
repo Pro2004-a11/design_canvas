@@ -1,0 +1,7 @@
+# Design Canvas — server dependencies
+# No torch / diffusers: ComfyUI owns all GPU work.
+fastapi
+uvicorn[standard]
+aiohttp
+pillow
+python-multipart
