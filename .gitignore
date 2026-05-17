@@ -28,3 +28,9 @@ Thumbs.db
 
 # ── Logs ──
 *.log
+
+# ── Source media (keep the lightweight docs/demo.gif, not the raw MP4) ──
+demo_Git.mp4
+*.mp4
+*.m4v
+_images/

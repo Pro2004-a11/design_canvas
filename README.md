@@ -1,6 +1,10 @@
 # Design Canvas 🎨
 > **3D Staging Canvas → AI Product Renders, powered by ComfyUI**
 
+<p align="center">
+  <img src="docs/demo.gif" alt="Design Canvas — demo" width="85%">
+</p>
+
 [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Three.js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
@@ -74,14 +78,16 @@ responsive while the GPU is fully committed to diffusion.
 
 ## 📸 Screenshots
 
-| Canvas — 3D Layer | Layer System |
+| | |
 |---|---|
-| ![Canvas](docs/screenshots/01-canvas.png) | ![Layers](docs/screenshots/02-layers.png) |
-| **Generate** | **Gallery + A\|B Compare** |
-| ![Generate](docs/screenshots/03-generate.png) | ![Gallery](docs/screenshots/04-gallery.png) |
-
-> _Images above are placeholders. Regenerate with `python docs/make_placeholders.py`,
-> or replace the files in `docs/screenshots/` with real captures (keep the filenames)._
+| ![Creative & AI](docs/screenshots/01-creative-ai.jpg) | ![Product Shot](docs/screenshots/02-product-shot.jpg) |
+| **A\|B preview — staged 3D vs. finished AI render** | **Product Shot — Eames lounge, studio finish** |
+| ![Any AI Tool](docs/screenshots/03-any-ai-tool.jpg) | ![Game Designer](docs/screenshots/04-game-designer.jpg) |
+| **ControlNet Canny — structure-locked render** | **Concept art — fantasy bottle set** |
+| ![Image to 3D](docs/screenshots/05-image-to-3d.jpg) | ![Remove Background](docs/screenshots/06-remove-background.jpg) |
+| **Image → 3D — single image to GLB mesh** | **Image → 3D — background removal step** |
+| ![Local AI Render](docs/screenshots/07-local-ai-render.jpg) | |
+| **Local AI render — fully on-device, zero cloud** | |
 
 ---
 
